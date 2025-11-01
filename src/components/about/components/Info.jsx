@@ -9,7 +9,9 @@ const Info = () => {
     const infoText = [
       "Hello, I'm Asuka and my Chinese name is 高梓竣(Gao Zi jun)",
       <>
-        In 2022, I took a compulsory course called HTML & Javascript. I fell in love with front-end development. I enjoyed the process of building pages. I worked on projects with my friends in college and gained a lot of sense of accomplishment. Now, I have become a front-end development engineer and I am about to graduate from <a href="https://www.cqnu.edu.cn/" target="_blank" className="underline italic">Chongqing Normal University</a> with a major in computer science and technology. I am proficient in technologies such as <a className="text-[#82c3da]">React</a> & <a className="text-[#73b785]">Vue</a>, and have a solid understanding of TypeScript and HTML/CSS.
+        In 2022, I took a compulsory course called HTML and JavaScript, and that’s when I fell in love with front-end development. I really enjoy the process of building web pages. During college, I collaborated with my friends on several projects and gained a strong sense of accomplishment. I graduated from Chongqing Normal University (CQNU) in 2025, and I am now working as a full-stack development engineer, mainly focusing on front-end development.
+        <br/><br/>
+        I am proficient in technologies such as <a className="text-[#82c3da]">React</a> & <a className="text-[#73b785]">Vue</a>, and I have a solid understanding of TypeScript and HTML/CSS.
       </>,
       'In my spare time, I will learn new technologies. I also love travel, photography and editing. I want to develop my own self-media account. I will see you soon. Please look forward to it.'
     ]

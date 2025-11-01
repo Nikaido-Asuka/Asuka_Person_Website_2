@@ -34,7 +34,7 @@ export const Timeline = ({
         </h2>
         <p
           className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I will graduate from college next June. These are the journeys and memories of my youth.
+          I graduated from college in June 2025. These are the journeys and memories of my youth.
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

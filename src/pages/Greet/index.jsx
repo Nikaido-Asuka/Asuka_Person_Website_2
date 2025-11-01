@@ -23,14 +23,15 @@ export default function Greet({ mode }) {
       <div className="info flex flex-col items-center gap-2 px-4 py-4 font-bold">
         <img
           className="w-[200px] h-[200px] rounded-full shadow-lg"
-          src="https://pic.imgdb.cn/item/674303bd88c538a9b5bb56ae.png"
+          src="https://pic1.imgdb.cn/item/6905f2c43203f7be00bf9ca2.jpg"
           alt=""
         />
         <div className="flex items-center flex-col text-[30px] font-bold">
           <div>Hello I'm </div>
           <FilpWordsDemo />
           <div className="wow animate__fadeInUp text-23 md:px-32 text-center">
-            With 2 years of experience. I enjoy building sites & apps. My focus is <a className="text-[#82c3da]">React</a> & <a className="text-[#73b785]">Vue</a> with <a className="text-[#73bbf6]">Tailwindcss</a>
+            With 2 years of experience. I enjoy building sites & apps.<br/>
+            My focus is <a className="text-[#82c3da]">React</a> & <a className="text-[#73b785]">Vue</a> with <a className="text-[#73bbf6]">Tailwindcss</a>
           </div>
         </div>
 
