@@ -37,10 +37,9 @@ export default function TimelineDemo() {
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
               Smart CQNU — WeChat Mini Program
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-              This is a WeChat Mini Program — a comprehensive campus portal and entertainment platform — that I developed together with two like-minded college classmates and successfully deployed online. I felt very happy when my friends and classmates around me started using the Mini Program I created.
-          </p>
+          <div className="mb-8 flex flex-col gap-2">
+            This is a WeChat Mini Program — a comprehensive campus portal and entertainment platform — that I developed together with two like-minded college classmates and successfully deployed online. I felt very happy when my friends and classmates around me started using the Mini Program I created.
+          </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
               src="https://pic1.imgdb.cn/item/6905f0723203f7be00bf9ad4.png"
