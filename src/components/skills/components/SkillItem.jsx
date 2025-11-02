@@ -11,6 +11,7 @@ const SkillItem = ({ skill }) => {
                {
                 skill.item.map((item, index) => (
                     <div 
+                      key={index}
                       className="wow animate__fadeInUp flex flex-col gap-1 items-center w-[calc(100%/3-1.25rem)] md:w-[calc(100%/7-1.25rem)]" 
                       data-wow-delay={`${index * 0.1}s`}  // 每个图标延迟 0.1 秒
                     >

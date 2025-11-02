@@ -29,8 +29,8 @@ const Info = () => {
                 ))
               }
             </div>
-            <div className=" md:w-1/3 justify-center items-center">
-              <AnimatedTestimonialsDemo/>
+            <div className="md:w-1/3 justify-center items-center">
+              <AnimatedTestimonialsDemo />
             </div>
             {/* <img
               className=" wow animate__fadeInRight w-72 h-full rounded-lg transform transition duration-300 ease-in-out hover:rotate-[5deg]"

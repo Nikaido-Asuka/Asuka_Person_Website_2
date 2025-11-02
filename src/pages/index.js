@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`transition-all duration-500 ease-in-out ${mode === 'light' ? 'bg-white text-black' : 'bg-gray-[#0c0c0c] text-white dark'}`}
+        className={`transition-all duration-500 ease-in-out ${mode === 'light' ? 'bg-white text-black' : 'bg-[#0c0c0c] text-white dark'}`}
       >
         <Greet mode={mode}/>
         <Mode mode={mode} setMode={setMode} />

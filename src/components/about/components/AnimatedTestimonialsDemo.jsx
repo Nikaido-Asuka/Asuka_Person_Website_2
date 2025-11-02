@@ -38,8 +38,5 @@ export function AnimatedTestimonialsDemo() {
       src: "https://pic.imgdb.cn/item/674d9a18d0e0a243d4dc11fb.jpg",
     }
   ];
-  return <AnimatedTestimonials
-    testimonials={testimonials}
-    className="w-[100px]"
-    />;
+  return <AnimatedTestimonials testimonials={testimonials} />;
 }
