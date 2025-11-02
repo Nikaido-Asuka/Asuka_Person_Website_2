@@ -8,22 +8,10 @@ const Language = ({
   const [index, setIndex] = useState(0);
   const { i18n } = useTranslation();
   const languageList = [
-    {
-      icon: '🇨🇳',
-      type: 'zh'
-    },
-    {
-      icon: '🇺🇸',
-      type: 'en'
-    },
-    {
-      icon: '🇯🇵',
-      type: 'jp'
-    },
-    {
-      icon: '🇰🇷',
-      type: 'ko'
-    },
+    { icon: '🇨🇳', type: 'zh' },
+    { icon: '🇺🇸', type: 'en' },
+    { icon: '🇯🇵', type: 'jp' },
+    { icon: '🇰🇷', type: 'ko' },
   ];
 
   const handleChangeIcon = () => {
@@ -40,7 +28,11 @@ const Language = ({
   };
 
   useEffect(() => {
-    const lang = localStorage.getItem('lang');
+    let lang = localStorage.getItem('lang');
+    if (!lang) {
+      lang = 'zh';
+      localStorage.setItem('lang', 'zh');
+    }
     const temp = languageList.findIndex(item => item.type === lang);
     setIndex(temp);
   }, []);
