@@ -1,11 +1,11 @@
 import Experience from "@/components/experience";
 import Greet from "./Greet";
 import Skills from "@/components/skills";
-import Mode from '@/components/mode'
+import Mode from '@/components/mode';
+import Language from "@/components/language";
 import { useState, useEffect } from 'react';
 import 'animate.css'
-
-import { AnimatedTestimonialsDemo } from "@/components/about/components/AnimatedTestimonialsDemo";
+import "../i18n/index"
 export default function Home() {
   const [mode, setMode] = useState();
   useEffect(() => {
@@ -24,6 +24,7 @@ export default function Home() {
         className={`transition-all duration-500 ease-in-out ${mode === 'light' ? 'bg-white text-black' : 'bg-[#0c0c0c] text-white dark'}`}
       >
         <Greet mode={mode}/>
+        <Language />
         <Mode mode={mode} setMode={setMode} />
         <Skills/>
         <Experience />

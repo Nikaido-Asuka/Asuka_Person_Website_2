@@ -9,15 +9,13 @@ import TikTok_White from '@/static/asstes/icons/tiktok_white.png'
 //components
 import Image from 'next/image'
 import FilpWordsDemo from '@/components/about/components/FilpWordsDemo'
-import { AnimatedTestimonialsDemo } from '@/components/about/components/AnimatedTestimonialsDemo'
 import Info from '@/components/about/components/Info'
-
-
-import { useEffect } from 'react';
 import useWow from '@/hooks/useWow'
+import { Trans, useTranslation } from 'react-i18next'
 
 export default function Greet({ mode }) {
   useWow();
+  const { t, i18n } = useTranslation();
   return (
     <div className="md:mx-12 mx-10 pt-[100px] flex items-center justify-center">
       <div className="info flex flex-col items-center gap-2 px-4 py-4 font-bold">
@@ -27,11 +25,19 @@ export default function Greet({ mode }) {
           alt=""
         />
         <div className="flex items-center flex-col text-[30px] font-bold">
-          <div>Hello I'm </div>
+          <div>{t("As_Hello")} </div>
           <FilpWordsDemo />
-          <div className="wow animate__fadeInUp text-23 md:px-32 text-center">
-            With 2 years of experience. I enjoy building sites & apps.<br/>
-            My focus is <a className="text-[#82c3da]">React</a> & <a className="text-[#73b785]">Vue</a> with <a className="text-[#73bbf6]">Tailwindcss</a>
+          <div
+            className="wow animate__fadeInUp text-23 md:px-32 text-center">
+            <Trans
+                i18nKey="As_Description"
+                components={{
+                  1: <br />,
+                  2: <a className="text-[#82c3da]" />,
+                  3: <a className="text-[#73b785]" />,
+                  4: <a className="text-[#73bbf6]" />
+                }}
+              />
           </div>
         </div>
 
@@ -40,7 +46,7 @@ export default function Greet({ mode }) {
             className=" wow animate__fadeInUp border-white bg-black text-white dark:bg-white dark:text-black px-5 h-[40px] rounded-full flex items-center justify-center gap-1"
             data-wow-delay="0.1s"
             >
-            DownLoad CV
+            {t("As_DownLoad_CV")}
             <Image className="w-[20px] h-[20px]" src={mode !== 'light' ? DownLoad : DownLoad_White} alt="" />
           </button>
           <div className="flex items-center gap-5">

@@ -3,23 +3,26 @@ import useWow from '@/hooks/useWow'
 import Image from 'next/image';
 
 import { AnimatedTestimonialsDemo } from './AnimatedTestimonialsDemo';
+import { useTranslation } from 'react-i18next';
 
 const Info = () => {
     useWow();
+    const { t, i18n } = useTranslation();
+    
     const infoText = [
-      "Hello, I'm Asuka and my Chinese name is 高梓竣(Gao Zi jun)",
+      <>{t("As_About_Text_1")}</>,
       <>
-        In 2022, I took a compulsory course called HTML and JavaScript, and that’s when I fell in love with front-end development. I really enjoy the process of building web pages. During college, I collaborated with my friends on several projects and gained a strong sense of accomplishment. I graduated from Chongqing Normal University (CQNU) in 2025, and I am now working as a full-stack development engineer, mainly focusing on front-end development.
+        {t("As_About_Text_2")}
         <br/><br/>
-        I am proficient in technologies such as <a className="text-[#82c3da]">React</a> & <a className="text-[#73b785]">Vue</a>, and I have a solid understanding of TypeScript and HTML/CSS.
+        {t("As_About_Text_3")}
       </>,
-      'In my spare time, I will learn new technologies. I also love travel, photography and editing. I want to develop my own self-media account. I will see you soon. Please look forward to it.'
+      <>{t("As_About_Text_4")}</>
     ]
     return (
         <>
           <div className="flex md:flex-row md:justify-between md:items-center flex-col gap-5  items-center">
             <div className=" flex md:w-2/3 flex-col gap-5 items-center text-[18px] md:text-left text-center">
-              <h2 className="text-[30px] wow animate__fadeInUp">About Me</h2>
+              <h2 className="text-[30px] wow animate__fadeInUp">{t("As_About_Me")}</h2>
               {
                 infoText.map((item, index) => (
                   <p 

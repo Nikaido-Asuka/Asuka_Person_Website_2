@@ -1,8 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { use } from "react";
 import { Timeline } from "@/components/ui/timeline";
+import { useTranslation } from "react-i18next";
 
 export default function TimelineDemo() {
+  const { t } = useTranslation();
   const data = [
     {
       title: "2021 - 2025",
@@ -11,11 +13,11 @@ export default function TimelineDemo() {
           <div>
             <p
                 className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-                Studying at Chongqing Normal University
+                {t("As_Journey_Youth_Collage")}
             </p>
             <p
                 className="text-neutral-800 dark:text-neutral-200 font-normal mb-8">
-                Computer Science and Technology Major
+                {t("As_Journey_Youth_Major")}
             </p>
           </div>
           <div className=" flex flex-col gap-2">
@@ -35,10 +37,10 @@ export default function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-              Smart CQNU — WeChat Mini Program
+            {t("As_Journey_Youth_Smart_CQNU")}
           </p>
           <div className="mb-8 flex flex-col gap-2">
-            This is a WeChat Mini Program — a comprehensive campus portal and entertainment platform — that I developed together with two like-minded college classmates and successfully deployed online. I felt very happy when my friends and classmates around me started using the Mini Program I created.
+            {t("As_Journey_Youth_Smart_CQNU_Description")}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -63,10 +65,10 @@ export default function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-            Journey to Shangri-La, Yunnan
+            {t("As_Journey_Youth_YunNan")}
           </p>
           <div className="mb-8 flex flex-col gap-2">
-            Ever since I fell in love with photography and became overwhelmed by the fast pace of city life, I no longer long for big cities. Instead, I yearn to get closer to nature — to feel it, to embrace it. The Tibetan region has become my favorite place, with its fascinating Tibetan culture and distinctive traditional architecture. There, the sky is crystal clear, and the clouds seem close enough to touch. Even the air carries a sense of tranquility and purity. Every time I set foot on that land, I feel a deep sense of peace and strength within. Perhaps this is the rhythm of life I have been searching for — free from the noise, returning to the truest version of myself.
+            {t("As_Journey_Youth_YunNan_Description")}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -107,19 +109,19 @@ export default function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-            Hangzhou Hikvision Digital Technology Co., Ltd
+            {t("As_Journey_Youth_Hikvision")}
           </p>
           <div className="mb-8 flex flex-col gap-2">
-              It is mainly aimed at participating in the development of international projects and the customization of project personalization. It uses micro-front-end architecture combined with Vue2 to realize the sub-application development of different functional modules, and modifies or develops the sub-applications of the corresponding projects on the basis of the baseline according to the different personalization and other needs of projects in various countries.
+              {t("As_Journey_Youth_Hikvision_Description_1")}
               <br/>
               <br/>
-              Use Hikvision to develop the internal component library to quickly build the page and provide the events, attributes, apis, etc. of modified related components to improve the overall development efficiency.
+              {t("As_Journey_Youth_Hikvision_Description_2")}
               <br/>
               <br/>
-              Actively cooperate and coordinate with other group members, communicate requirements and access interfaces, follow the standard development specifications and development processes, and improve development efficiency and team coordination.
+              {t("As_Journey_Youth_Hikvision_Description_3")}
               <br/>
               <br/>
-              Regular group meetings to report the complete progress of recent development projects, such as development, development joint adjustment, test cases, project completion, etc., have a perfect team building and development specifications, and have team management experience based on the above.
+              {t("As_Journey_Youth_Hikvision_Description_4")}
           </div>
           <div className="">
             <Image
@@ -138,13 +140,13 @@ export default function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-            Journey to Kangding, Western Sichuan
+            {t("As_Journey_Youth_Kangding")}
           </p>
           <div className="mb-8 flex flex-col gap-2">
-            It was my first time setting foot in Western Sichuan, my first trip with friends, and also my first time truly learning to let go after a major upheaval in my family. The journey came so suddenly that we were almost completely unprepared — none of us expected to challenge the steep mountain trails of the highlands. Along the way, though we were breathless and exhausted, there was far more laughter and emotion than fatigue.
+            {t("As_Journey_Youth_Kangding_Description_1")}
             <br/>
             <br/>
-            On that vast plateau, the wind was cold, yet the sky was strikingly blue. The sunlight shimmered on the snow-capped peaks, and even the air seemed filled with healing power. Just a month before, I had been suffocated by pain and confusion, but this journey helped me rediscover peace and courage. Perhaps that’s what life is about — only by stepping beyond the familiar can we truly see into our own hearts.
+            {t("As_Journey_Youth_Kangding_Description_2")}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -185,10 +187,10 @@ export default function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-            Leapmotor Technologies Co., Ltd.
+            {t("As_Journey_Youth_Leapmotor")}
           </p>
           <div className="mb-8 flex flex-col gap-2">
-            I joined the company as a campus recruit in June 2025. I work in the Platform Software Department at Leapmotor Technologies Co., Ltd., where I am responsible for the web development of the company’s internal comprehensive vehicle management platform. Since joining, I have participated in the platform’s refactoring from Vue to React, developed reusable business components for the React version, and built the documentation website for the component library. In the future, I will continue to create more meaningful and valuable contributions.
+            {t("As_Journey_Youth_Leapmotor_Description")}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -208,23 +210,23 @@ export default function TimelineDemo() {
       )
     },
     {
-      title: "Future",
+      title: t("As_Journey_Youth_Future"),
       content: (
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-4xl md:text-4xl font-normal mb-8">
-            The story of the future......
+            {t("As_Journey_Youth_Story_Future")}
           </p>
           <div className="mb-8 flex flex-col gap-2">
-            My story is still unfolding. Although life can sometimes be filled with pain and uncertainty, I still choose to move forward. The road ahead may not always be smooth, but I will carry my past experiences and growth with me as I continue to seek my own light. The moments that once broke me have now turned into the strength that supports me. No matter how far or difficult the journey ahead may be, I will keep walking with a smile — because I know that only by moving forward can life reveal new and beautiful horizons.
+            {t("As_Journey_Youth_Story_Future_Description_1")}
             <br/><br/>
-            If you’d like to learn more about my story, feel free to follow me or contact me:
+            {t("As_Journey_Youth_Story_Future_Description_2")}
             <br/><br/>
             <div className="flex items-center justify-start gap-5">
-              📧 Email: <span>nikaidoasuka03@gmail.com</span>
+              📧 {t("As_Email")}: <span>nikaidoasuka03@gmail.com</span>
             </div>
             <div className="flex items-center justify-start gap-5">
-              💬 WeChat: <span>17729639582</span>
+              💬 {t("As_WeChat")}: <span>17729639582</span>
             </div>
            
           </div>

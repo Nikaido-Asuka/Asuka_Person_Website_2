@@ -1,100 +1,64 @@
 import SkillItem from "./components/SkillItem";
+import { useTranslation } from "react-i18next";
 
-import React from '@/static/asstes/icons/skills/React.png'
-import Next from '@/static/asstes/icons/skills/Next.png'
-import Vue from '@/static/asstes/icons/skills/Vue.png'
-import Ts from '@/static/asstes/icons/skills/Ts.png'
-import Js from '@/static/asstes/icons/skills/Js.png'
-import H5 from '@/static/asstes/icons/skills/HTML5.png'
-import TailwindCSS from '@/static/asstes/icons/skills/Tailwindcss.png'
+import ReactIcon from '@/static/asstes/icons/skills/React.png'
+import NextIcon from '@/static/asstes/icons/skills/Next.png'
+import VueIcon from '@/static/asstes/icons/skills/Vue.png'
+import TsIcon from '@/static/asstes/icons/skills/Ts.png'
+import JsIcon from '@/static/asstes/icons/skills/Js.png'
+import H5Icon from '@/static/asstes/icons/skills/HTML5.png'
+import TailwindCSSIcon from '@/static/asstes/icons/skills/Tailwindcss.png'
 
-import Davinci from '@/static/asstes/icons/skills/Davinci.png'
-import Jy from '@/static/asstes/icons/skills/Jy.png'
-import Figma from '@/static/asstes/icons/skills/Figma.png'
+import DavinciIcon from '@/static/asstes/icons/skills/Davinci.png'
+import JyIcon from '@/static/asstes/icons/skills/Jy.png'
+import FigmaIcon from '@/static/asstes/icons/skills/Figma.png'
 
-import Springboot from '@/static/asstes/icons/skills/Spingboot.png'
-import Node from '@/static/asstes/icons/skills/Node.png'
+import SpringbootIcon from '@/static/asstes/icons/skills/Spingboot.png'
+import NodeIcon from '@/static/asstes/icons/skills/Node.png'
 
-const skills = [
-  {
-    title: 'Web Development',
-    item: [
-      {
-        icon: React,
-        name: 'React'
-      },
-      {
-        icon: Next,
-        name: 'Next'
-      },
-      {
-        icon: Vue,
-        name: 'Vue'
-      },
-      {
-        icon: Ts,
-        name: 'TypeScript'
-      },
-      {
-        icon: Js,
-        name: 'JavaScript'
-      },
-      {
-        icon: H5,
-        name: 'HTML5'
-      },
-      {
-        icon: TailwindCSS,
-        name: 'TaliwindCSS'
-      }
-    ]
-  },
-  {
-    title: 'Backend Development',
-    item: [
-      {
-        icon: Springboot,
-        name: 'Springboot'
-      },
-      {
-        icon: Node,
-        name: 'Node'
-      }
-    ]
-  },
-  {
-    title: 'Vision & Design',
-    item: [
-      {
-        icon: Davinci,
-        name: 'Davinci'
-      },
-      {
-        icon: Jy,
-        name: '剪映'
-      },
-      {
-        icon: Figma,
-        name: 'Figma'
-      }
-    ]
-  }
-]
 const Skills = () => {
-    return (
-        <>
-          <div className=" md:mx-12 mx-10 flex flex-col justify-center items-center">
-            <div className=" text-[30px] font-bold">My Skills</div>
-            <div className=" flex w-full flex-col gap-5">
-              {
-                skills.map((item) => (
-                  <SkillItem skill={item}/>
-                ))
-              }
-            </div>
-            
-          </div>
-        </>
-    )
+  const { t } = useTranslation();
+
+  const skills = [
+    {
+      title: t("As_My_Skills_Web"),
+      item: [
+        { icon: ReactIcon, name: 'React' },
+        { icon: NextIcon, name: 'Next' },
+        { icon: VueIcon, name: 'Vue' },
+        { icon: TsIcon, name: 'TypeScript' },
+        { icon: JsIcon, name: 'JavaScript' },
+        { icon: H5Icon, name: 'HTML5' },
+        { icon: TailwindCSSIcon, name: 'TailwindCSS' }
+      ]
+    },
+    {
+      title: t("As_My_Skills_Backend"),  // ✅ 如果你在语言包里加了对应 key
+      item: [
+        { icon: SpringbootIcon, name: 'Springboot' },
+        { icon: NodeIcon, name: 'Node' }
+      ]
+    },
+    {
+      title: t("As_My_Skills_Design"),
+      item: [
+        { icon: DavinciIcon, name: 'Davinci' },
+        { icon: JyIcon, name: '剪映' },
+        { icon: FigmaIcon, name: 'Figma' }
+      ]
+    }
+  ];
+
+  return (
+    <div className="md:mx-12 mx-10 flex flex-col justify-center items-center">
+      <div className="text-[30px] font-bold">{t("As_My_Skills")}</div>
+      <div className="flex w-full flex-col gap-5">
+        {skills.map((item, index) => (
+          <SkillItem key={index} skill={item} />
+        ))}
+      </div>
+    </div>
+  );
 }
+
 export default Skills;
