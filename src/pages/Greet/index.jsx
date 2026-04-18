@@ -8,7 +8,7 @@ import TikTok from '@/static/asstes/icons/tiktok.png'
 import TikTok_White from '@/static/asstes/icons/tiktok_white.png'
 //components
 import Image from 'next/image'
-import FilpWordsDemo from '@/components/about/components/FilpWordsDemo'
+import FlipWordsDemo from '@/components/about/components/FlipWordsDemo'
 import Info from '@/components/about/components/Info'
 import useWow from '@/hooks/useWow'
 import { Trans, useTranslation } from 'react-i18next'
@@ -26,7 +26,7 @@ export default function Greet({ mode }) {
         />
         <div className="flex items-center flex-col text-[30px] font-bold">
           <div>{t("As_Hello")} </div>
-          <FilpWordsDemo />
+          <FlipWordsDemo />
           <div
             className="wow animate__fadeInUp text-23 md:px-32 text-center">
             <Trans
