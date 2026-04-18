@@ -3,6 +3,7 @@ import Greet from "./Greet";
 import Skills from "@/components/skills";
 import Mode from '@/components/mode';
 import Language from "@/components/language";
+import Favorites from "@/components/favorites";
 import { useState, useEffect } from 'react';
 import 'animate.css'
 import "../i18n/index"
@@ -27,6 +28,7 @@ export default function Home() {
         <Language />
         <Mode mode={mode} setMode={setMode} />
         <Skills/>
+        <Favorites />
         <Experience />
         
         {/* <FloatingDockDemo/> */}
